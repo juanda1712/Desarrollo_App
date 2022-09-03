@@ -8,20 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Unidad1_API
+namespace Unidad1_API.POO.Views
 {
-    public partial class Form2 : Form
+    public partial class Landing : Form
     {
-        public Form2()
+        public Landing()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Landing_Load(object sender, EventArgs e)
         {
-        //    Form1 form = new Form1();
-        //    form.Cargar_datos("asdas");
-            this.Close();
+
         }
     }
 }
