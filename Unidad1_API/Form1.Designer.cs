@@ -106,7 +106,7 @@
             this.button4.BackColor = System.Drawing.Color.Cyan;
             this.button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.DarkGray;
-            this.button4.Location = new System.Drawing.Point(29, 331);
+            this.button4.Location = new System.Drawing.Point(169, 327);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(319, 39);
             this.button4.TabIndex = 9;
