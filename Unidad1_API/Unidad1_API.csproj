@@ -58,7 +58,14 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="POO\Class\Control.cs" />
     <Compile Include="POO\Class\Empleado.cs" />
+    <Compile Include="POO\Class\Factura.cs" />
+    <Compile Include="POO\Class\Interface1.cs" />
+    <Compile Include="POO\Class\ProdMaster.cs" />
+    <Compile Include="POO\Class\Producto.cs" />
+    <Compile Include="POO\Class\Producto_Nac.cs" />
+    <Compile Include="POO\Class\Sys.cs" />
     <Compile Include="POO\Views\Landing.cs">
       <SubType>Form</SubType>
     </Compile>
