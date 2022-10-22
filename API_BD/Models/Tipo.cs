@@ -10,11 +10,9 @@ namespace API_BD.Models
         {
             Contactos = new HashSet<Contacto>();
         }
-
         [JsonIgnore]
         public int IdTipo { get; set; }
         public string? Descripcion { get; set; }
-
         [JsonIgnore]
         public virtual ICollection<Contacto> Contactos { get; set; }
     }

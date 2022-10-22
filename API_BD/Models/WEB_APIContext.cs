@@ -18,9 +18,11 @@ namespace API_BD.Models
 
         public virtual DbSet<Contacto> Contactos { get; set; } = null!;
         public virtual DbSet<Tipo> Tipos { get; set; } = null!;
+        public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+      
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -60,6 +62,19 @@ namespace API_BD.Models
                 entity.Property(e => e.Descripcion)
                     .HasMaxLength(50)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.Property(e => e.Contraseña).HasMaxLength(10);
+
+                entity.Property(e => e.Idusuario).ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Nombre).HasMaxLength(50);
+
+                entity.Property(e => e.Perfil).HasMaxLength(30);
             });
 
             OnModelCreatingPartial(modelBuilder);

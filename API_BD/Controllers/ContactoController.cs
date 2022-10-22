@@ -1,7 +1,9 @@
 ﻿using API_BD.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace API_BD.Controllers
 {
@@ -19,9 +21,15 @@ namespace API_BD.Controllers
 
         [HttpGet]
         [Route("Lista")]
+        [Authorize]
         public IActionResult Lista()
         {
             List<Contacto> lista = new List<Contacto>();
+
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            var Valid = Funciones_Varias.ValidarToken(identity);
+
 
             try
             {
@@ -41,6 +49,7 @@ namespace API_BD.Controllers
 
         [HttpGet]
         [Route("Detalle")]
+        [Authorize]
         public IActionResult Detalle(int id)
         {
             Contacto ObjContacto = _dbcontex.Contactos.Find(id) ;
@@ -68,6 +77,7 @@ namespace API_BD.Controllers
 
         [HttpPost]
         [Route("Guardar")]
+        [Authorize]
         public IActionResult Guardar([FromBody] Contacto objContacto)
         {
 
@@ -91,6 +101,7 @@ namespace API_BD.Controllers
 
         [HttpPut]
         [Route("Modificar")]
+        [Authorize]
         public IActionResult Modificar([FromBody] Contacto objContacto )
         {
             Contacto _Contacto = _dbcontex.Contactos.Find(objContacto.IdContacto);
@@ -126,6 +137,7 @@ namespace API_BD.Controllers
 
         [HttpDelete]
         [Route("Eliminar")]
+        [Authorize]
         public IActionResult Eliminar (int id)
         {
             Contacto ObjContacto = _dbcontex.Contactos.Find(id);
