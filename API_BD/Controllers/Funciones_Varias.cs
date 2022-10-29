@@ -15,8 +15,12 @@ namespace API_BD.Controllers
 				{
 					return false;
 				}
-				return true;
 
+                var perfil = identity.Claims.FirstOrDefault(x => x.Type == "Perfil");
+
+                return true;
+
+				
 			}
 			catch (Exception ex)
 			{

@@ -49,7 +49,7 @@ namespace API_BD.Controllers
 
         [HttpGet]
         [Route("Detalle")]
-        [Authorize]
+       
         public IActionResult Detalle(int id)
         {
             Contacto ObjContacto = _dbcontex.Contactos.Find(id) ;
@@ -77,7 +77,7 @@ namespace API_BD.Controllers
 
         [HttpPost]
         [Route("Guardar")]
-        [Authorize]
+        
         public IActionResult Guardar([FromBody] Contacto objContacto)
         {
 
@@ -101,7 +101,7 @@ namespace API_BD.Controllers
 
         [HttpPut]
         [Route("Modificar")]
-        [Authorize]
+       
         public IActionResult Modificar([FromBody] Contacto objContacto )
         {
             Contacto _Contacto = _dbcontex.Contactos.Find(objContacto.IdContacto);
@@ -137,7 +137,7 @@ namespace API_BD.Controllers
 
         [HttpDelete]
         [Route("Eliminar")]
-        [Authorize]
+      
         public IActionResult Eliminar (int id)
         {
             Contacto ObjContacto = _dbcontex.Contactos.Find(id);

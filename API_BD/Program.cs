@@ -35,16 +35,32 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 });
 
+
+
+var ReglasCors = "ReglasCors";
+builder.Services.AddCors(opt =>
+    {
+        opt.AddPolicy(name: ReglasCors, builder =>
+        {
+            builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+
+        });
+
+    }); 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
 
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.UseCors(ReglasCors);
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
