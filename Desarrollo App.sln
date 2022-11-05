@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Unidad_2", "API_Unidad_2\API_Unidad_2.csproj", "{A67BD11D-4D13-4F69-A0A2-1F8DF9B78C07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_BD", "API_BD\API_BD.csproj", "{30572C40-6EC6-4A74-9002-9C0D005D1F06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_BD", "API_BD\API_BD.csproj", "{30572C40-6EC6-4A74-9002-9C0D005D1F06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalAPI", "MinimalAPI\MinimalAPI.csproj", "{15C79905-809F-4516-8BFC-FEE8F38851AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{30572C40-6EC6-4A74-9002-9C0D005D1F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30572C40-6EC6-4A74-9002-9C0D005D1F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30572C40-6EC6-4A74-9002-9C0D005D1F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C79905-809F-4516-8BFC-FEE8F38851AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C79905-809F-4516-8BFC-FEE8F38851AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C79905-809F-4516-8BFC-FEE8F38851AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C79905-809F-4516-8BFC-FEE8F38851AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
